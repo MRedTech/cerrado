@@ -468,6 +468,7 @@
   <option value="SHOPEE EXPRESS">SHOPEE EXPRESS</option>
   <option value="SHOPEE FOOD">SHOPEE FOOD</option>
   <option value="TENANT">TENANT</option>
+  <option value="PEDESTRIAN B1">PEDESTRIAN B1</option>
   <option value="OTHER">OTHER</option>
 </select>
 
@@ -687,8 +688,8 @@
   remarkSelect.addEventListener('change', function() {
     const val = this.value.toUpperCase();
     // UNIT NUMBER hanya untuk OWNER/TENANT
-    unitField.style.display = (val === 'OWNER' || val === 'TENANT') ? 'block' : 'none';
-    if (val === 'OWNER' || val === 'TENANT') {
+    unitField.style.display = (val === 'OWNER' || val === 'TENANT' || val === 'PEDESTRIAN B1') ? 'block' : 'none';
+    if (val === 'OWNER' || val === 'TENANT' || val === 'PEDESTRIAN B1') {
       reasonSection.style.display = 'block';
     } else {
       reasonSection.style.display = 'none';
@@ -699,7 +700,7 @@
     // OTHER CATEGORY
     otherField.style.display = (val === 'OTHER') ? 'block' : 'none';
     if (val !== 'OTHER') otherField.value = '';
-    if (val !== 'OWNER' && val !== 'TENANT') unitField.value = '';
+    if (val !== 'OWNER' && val !== 'TENANT' && val !== 'PEDESTRIAN B1') unitField.value = '';
   });
 
   // Reason dropdown - bila pilih Other, show input
