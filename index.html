@@ -1245,7 +1245,7 @@ let reasonOtherVal = document.getElementById('reasonOther').value.trim();
 // === FORMAT CATEGORY ===
 if (remarkValue === "OTHER" && otherCategoryVal) {
   remarkValue = `OTHER ( ${otherCategoryVal} )`;
-} else if ((remarkValue === "OWNER" || remarkValue === "TENANT") && unitNumberVal) {
+} else if ((remarkValue === "OWNER" || remarkValue === "TENANT" || remarkValue === "PEDESTRIAN B1") && unitNumberVal) {
   remarkValue = `${remarkValue} ( ${unitNumberVal} )`;
 }
 
