@@ -463,7 +463,7 @@
 
   <div class="image-container" id="imageContainer">
     <img id="preview" src="#" alt="IMAGE PREVIEW">
-    <div class="watermark">SENSORY USE ONLY</div>
+    <div class="watermark">CERRADO USE ONLY</div>
   </div>
 
   <form id="registrationForm" autocomplete="off">
@@ -512,6 +512,7 @@
       <option value="LAZADA">LAZADA</option>
       <option value="MCD FOOD DELIVERY">MCD FOOD DELIVERY</option>
       <option value="OWNER">OWNER</option>
+      <option value="PEDESTRIAN BI">PEDESTRIAN B1</option>
       <option value="SHOPEE EXPRESS">SHOPEE EXPRESS</option>
       <option value="SHOPEE FOOD">SHOPEE FOOD</option>
       <option value="TENANT">TENANT</option>
@@ -850,7 +851,7 @@ reasonOther.required = false;
 
 remarkSelect.addEventListener('change', function() {
   const val = this.value.toUpperCase();
-  const isResident = (val === 'OWNER' || val === 'TENANT');
+  const isResident = (val === 'OWNER' || val === 'TENANT' || val === 'PEDESTRIAN B1');
 
   // OWNER / TENANT → show UNIT & REASON
   unitField.style.display     = isResident ? 'block' : 'none';
