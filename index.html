@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://ext-cerrado.edreborn86.workers.dev" crossorigin>
-    <link rel="dns-prefetch" href="//ext-cerrado.edreborn86.workers.dev">
-    <link rel="preconnect" href="https://sensory-vision.edreborn86.workers.dev" crossorigin>
-    <link rel="dns-prefetch" href="//sensory-vision.edreborn86.workers.dev">
+    <link rel="preconnect" href="https://cerrado.edreborn86.workers.dev" crossorigin>
+    <link rel="dns-prefetch" href="//cerrado.edreborn86.workers.dev">
+    <link rel="preconnect" href="https://secure-entry-vision02.edreborn86.workers.dev" crossorigin>
+    <link rel="dns-prefetch" href="//secure-entry-vision02.edreborn86.workers.dev">
 
     <style>
 
@@ -31,7 +31,7 @@
 
     }
 
-    
+
 
     .header-inner{
 
@@ -59,7 +59,7 @@
 
     }
 
-    
+
 
     body{
 
@@ -75,7 +75,7 @@
 
     }
 
-    
+
 
     h2 {
 
@@ -89,7 +89,6 @@
 
         font-weight: 800;
       }
-
 
       .clock-bar {
 
@@ -159,7 +158,7 @@
 
       }
 
-    
+
 
       .swal2-popup {
 
@@ -273,7 +272,7 @@
 
       }
 
-    
+
 
     .top-action {
 
@@ -327,7 +326,7 @@
 
       }
 
-    
+
 
       .photo-label {
 
@@ -345,7 +344,7 @@
 
       }
 
-    
+
 
       .image-container {
 
@@ -421,7 +420,7 @@
 
       }
 
-    
+
 
       label {
 
@@ -480,7 +479,6 @@
       }
 
 
-    
 
       select:invalid,
       .reason-placeholder {
@@ -495,7 +493,7 @@
 
       }
 
-    
+
 
       .phone-container {
 
@@ -579,7 +577,7 @@
 
       }
 
-    
+
 
       .footer {
 
@@ -605,7 +603,7 @@
 
     }
 
-    
+
 
       .camera-modal {
 
@@ -664,25 +662,17 @@
       }
 
       .guideline {
-
         position: absolute;
-
         border: 3px solid #28cc6c;
-
         border-radius: 8px;
-
-        left: 4%;
-
-        top: 4%;
-
+        left: 50%;
+        top: 50%;
         width: 92%;
-
-        height: 92%;
-
+        height: auto;
+        aspect-ratio: var(--se-doc-ar, 1.585);
+        transform: translate(-50%, -50%);
         pointer-events: none;
-
         box-sizing: border-box;
-
       }
 
       .close-cam-btn {
@@ -713,6 +703,38 @@
 
         box-shadow: 0 2px 10px #aaa;
 
+      }
+
+      .doc-mode-bar{
+        position:absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 120;
+        display:flex;
+        gap:6px;
+        padding: 6px;
+        border-radius: 12px;
+        background: rgba(0,0,0,.28);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        pointer-events: auto;
+      }
+      .doc-pill{
+        border: 1px solid rgba(255,255,255,.25);
+        color:#fff;
+        background: rgba(255,255,255,.08);
+        border-radius: 999px;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 1.2px;
+        padding: 6px 10px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .doc-pill.active{
+        background: linear-gradient(145deg, #41e671 0%, #176B39 100%);
+        border-color: rgba(255,255,255,.28);
+        box-shadow: 0 0 0 3px rgba(59,217,123,.18);
       }
 
       .capture-btn-3d {
@@ -781,7 +803,7 @@
 
         box-sizing: border-box;
 
-    
+
 
         border: 3px solid rgba(255, 255, 255, 0.25);
 
@@ -801,7 +823,7 @@
 
       }
 
-    
+
 
       @keyframes google-spin {
 
@@ -813,7 +835,7 @@
 
       }
 
-    
+
 
     .ocr-panel{
 
@@ -831,7 +853,7 @@
 
     }
 
-    
+
 
     .ocr-item{
 
@@ -853,7 +875,7 @@
 
     }
 
-    
+
 
     .ocr-item .dot{
 
@@ -867,19 +889,19 @@
 
     }
 
-    
+
 
     .ocr-item.bad{ color:#ff3b3b; }
 
     .ocr-item.bad .dot{ background:#ff3b3b; box-shadow:0 0 12px rgba(255,59,59,.65); }
 
-    
+
 
     .ocr-item.good{ color:#16c172; }
 
     .ocr-item.good .dot{ background:#16c172; box-shadow:0 0 12px rgba(22,193,114,.85); }
 
-    
+
 
     .guideline.ocr-ready{
 
@@ -887,7 +909,7 @@
 
     }
 
-    
+
 
     @keyframes ocrGoogleBorder{
 
@@ -911,7 +933,7 @@
 
     }
 
-    
+
 
     .camera-wrap{
 
@@ -925,7 +947,7 @@
 
     }
 
-    
+
 
     #ocrLivePanel.ocr-panel{
 
@@ -943,7 +965,7 @@
 
     }
 
-    
+
 
     .ocr-title{
 
@@ -961,7 +983,7 @@
 
     }
 
-    
+
 
     .camera-wrap .capture-btn-3d{
 
@@ -973,7 +995,7 @@
 
     }
 
-    
+
 
     #cameraModal .capture-btn-3d{
 
@@ -987,7 +1009,7 @@
 
     }
 
-    
+
 
     .search-minicard {
 
@@ -1077,7 +1099,6 @@ textarea:focus{
   box-shadow: 0 0 0 3px rgba(59,217,123,.18) !important;
 }
 
-
       .search-mini-btn {
 
         width: 100%;
@@ -1130,10 +1151,8 @@ textarea:focus{
 
       }
 
-    
-
 /* ==================================================
-   PREMIUM UI PATCH 
+   PREMIUM UI PATCH
    - Fixed header premium (Sensory style)
    - Soft green glow cards/inputs
    - Consistent 3D/gradient buttons
@@ -1144,7 +1163,7 @@ textarea:focus{
   --se-green-2:#176B39;
   --se-green-3:#3bd97b;
   --se-text:#176B39;
-  --se-placeholder: #a7b2ad; /* kelabu pudar */
+  --se-placeholder: #a7b2ad;
   --se-card:#ffffff;
   --se-glow:rgba(59,217,123,.18);
   --se-glow-strong:rgba(59,217,123,.28);
@@ -1155,7 +1174,6 @@ html, body, button, input, select, textarea, label, h1, h2, h3, h4, h5, h6,
 .clock-bar, .header-gradient, .search-mini-title, .photo-label, .swal2-popup, .swal2-title, .swal2-html-container, .swal2-confirm, .swal2-cancel, .footer {
   font-family: 'Google Sans','Google Sans Text',Roboto,Arial,sans-serif !important;
 }
-
 
 /* Respect reduce-motion */
 @media (prefers-reduced-motion: reduce){
@@ -1219,6 +1237,31 @@ select:focus,
   box-shadow: 0 0 0 3px rgba(59,217,123,.18);
 }
 
+/* Required/invalid: red blink on submit (overrides green focus glow) */
+.se-invalid-blink,
+.se-invalid-blink:focus,
+.se-invalid-blink:focus-visible,
+.se-invalid-blink:invalid{
+  border-color: rgba(231,76,60,.95) !important;
+  box-shadow:
+    0 0 0 2px rgba(231,76,60,.25),
+    0 0 0 5px rgba(231,76,60,.12) !important;
+  animation: seInvalidBlink 1s ease-in-out infinite;
+}
+
+@keyframes seInvalidBlink{
+  0%,100%{
+    box-shadow:
+      0 0 0 2px rgba(231,76,60,.22),
+      0 0 0 5px rgba(231,76,60,.10);
+  }
+  50%{
+    box-shadow:
+      0 0 0 3px rgba(231,76,60,.35),
+      0 0 0 7px rgba(231,76,60,.16);
+  }
+}
+
 /* Buttons: consistent premium gradient + micro-lift */
 .btn-3d,
 .swal2-confirm{
@@ -1252,7 +1295,23 @@ select:focus,
   animation: seSuccessPop .18s ease-out;
 }
 
+/* SweetAlert2 toast helper (Option A) */
+.swal2-container{ z-index: 99999 !important; }
+      .swal2-popup.swal2-toast{ box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+      /* Toast typography (slightly smaller + cleaner) */
+      .swal2-popup.swal2-toast{ padding: 10px 12px !important; }
+      .swal2-popup.swal2-toast .swal2-title{ font-size: 14px !important; letter-spacing: 0.8px !important; line-height: 1.15 !important; }
+      .swal2-popup.swal2-toast .swal2-html-container{ font-size: 12px !important; letter-spacing: 0.45px !important; line-height: 1.25 !important; }
+      .swal2-popup.swal2-toast .swal2-icon{ width: 1.6em !important; height: 1.6em !important; margin: 0 .55em 0 0 !important; }
+      .swal2-popup.swal2-toast .swal2-icon-content{ font-size: 1.15em !important; }
+      /* Secure Entry: center toast content (icon + text) */
+      .swal2-container.se-toast-near{ pointer-events:none; }
+      .swal2-container.se-toast-near .swal2-popup.swal2-toast{ pointer-events:auto; }
+      .swal2-popup.swal2-toast{ justify-content:center; }
+      .swal2-popup.swal2-toast .swal2-title{ text-align:center; margin:0; }
 </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
   </head>
   <body>
 
@@ -1286,9 +1345,9 @@ select:focus,
   </button>
 </div>
 <div class="top-action">
-  <button type="button" id="takePhotoBtn" class="btn-3d" onclick="openCamera()">TAKE PICTURE
+  <button type="button" id="takePhotoBtn" class="btn-3d" onclick="openCamera()">TAKE PHOTO
 </button>
-<span class="photo-label">Take photo of MyKad/Licence</span>
+<span class="photo-label">Take a photo of MyKad/Licence</span>
 </div>
 <div class="image-container" id="imageContainer">
   <img id="preview" src="#" alt="IMAGE PREVIEW">
@@ -1329,7 +1388,6 @@ select:focus,
     <option value="MCD FOOD DELIVERY">MCD FOOD DELIVERY</option>
     <option value="NINJA VAN">NINJA VAN</option>
     <option value="OWNER">OWNER</option>
-    <option value="PEDESTRIAN B1">PEDESTRIAN B1</option>
     <option value="POS LAJU">POS LAJU</option>
     <option value="RESTAURANT DELIVERY">RESTAURANT DELIVERY</option>
     <option value="SHOPEE EXPRESS">SHOPEE EXPRESS</option>
@@ -1373,6 +1431,12 @@ select:focus,
     <div class="camera-container">
       <video id="camera-video" autoplay playsinline>
       </video>
+      <div class="doc-mode-bar" id="docModeBar" aria-label="Document type">
+        <div class="doc-pill active" data-mode="CARD">CARD</div>
+        <div class="doc-pill" data-mode="PASSPORT">PASSPORT</div>
+        <div class="doc-pill" data-mode="BOOKLET">BOOKLET</div>
+      </div>
+
       <div class="guideline" id="ocrGuideline">
       </div>
       <canvas id="ocrProbe" width="320" height="240" style="display:none;">
@@ -1418,9 +1482,8 @@ select:focus,
 </button>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-</script>
 <script>
 /* ==================================================
    SECURE ENTRY SYSTEM (Frontend)
@@ -1433,15 +1496,15 @@ select:focus,
 /* =========================
    CONFIG / CONSTANTS
 ========================= */
-const WORKER_URL = "https://ext-cerrado.edreborn86.workers.dev";
-const VISION_PROXY_URL = "https://sensory-vision.edreborn86.workers.dev";
+const WORKER_URL = "https://cerrado.edreborn86.workers.dev/";
+const OCR_WORKER_URL = "https://secure-entry-vision02.edreborn86.workers.dev";
 
 // Preview display ratio used by adjustPreviewSize() (maxHeight = width * ratio)
-const PREVIEW_MAX_RATIO = 0.70;
+const PREVIEW_MAX_RATIO = 0.78;
 
 // Output sizing (speed + upload size)
-const CAPTURE_MAX_W = 1100;          // max width for captured/cropped ID photo
-const CAPTURE_JPEG_Q = 0.75;         // keep same quality as current
+const CAPTURE_MAX_W = 1100;
+const CAPTURE_JPEG_Q = 0.75;
 
 const FIELD = {
   REG: "REGNUM",
@@ -1464,6 +1527,50 @@ const OCR_LIVE = {
 };
 
 /* =========================
+   OCR CAPTURE MODES (Doc Types)
+   - CARD: MyKad / Malaysia license / International license / ID card
+   - PASSPORT: Passport
+   - BOOKLET: Folded/large IDs
+========================= */
+const DOC_MODE = {
+  current: 'CARD',
+  presets: {
+    CARD:     { ar: 1.585, maxW: 1100, q: 0.76 },  // card ratio
+    PASSPORT: { ar: 1.420, maxW: 1400, q: 0.78 },  // passport ID-3 approx
+    BOOKLET:  { ar: 1.333, maxW: 1400, q: 0.78 }   // wide safety
+  }
+};
+
+function setDocMode(mode){
+  const m = (mode || 'CARD').toUpperCase();
+  DOC_MODE.current = DOC_MODE.presets[m] ? m : 'CARD';
+
+  const preset = DOC_MODE.presets[DOC_MODE.current];
+  const guide = document.getElementById('ocrGuideline');
+  if (guide && preset && preset.ar){
+    guide.style.setProperty('--se-doc-ar', String(preset.ar));
+  }
+
+  const bar = document.getElementById('docModeBar');
+  if (bar){
+    bar.querySelectorAll('.doc-pill').forEach(el => {
+      el.classList.toggle('active', (el.getAttribute('data-mode') || '').toUpperCase() === DOC_MODE.current);
+    });
+  }
+}
+
+(function bindDocModeUI(){
+  const bar = document.getElementById('docModeBar');
+  if (!bar) return;
+  bar.addEventListener('click', (e) => {
+    const t = e.target;
+    if (!(t && t.classList && t.classList.contains('doc-pill'))) return;
+    setDocMode(t.getAttribute('data-mode'));
+  });
+  setDocMode('CARD');
+})();
+
+/* =========================
    DOM REFS
 ========================= */
 const remarkSelect  = document.getElementById('remark');
@@ -1478,12 +1585,20 @@ const previewImg    = document.getElementById('preview');
 const imageContainer= document.getElementById('imageContainer');
 const watermarkOverlay = document.querySelector('#imageContainer .watermark');
 
+// Init select placeholder state
+try { setSelectPlaceholder(remarkSelect); } catch(e) {}
+
 let stream = null;
 let video  = null;
 
 // final image (single source of truth for submit)
 let __SE_SUBMIT_PHOTO = "";
-let __SE_OCR_PHOTO = "";
+
+// Global submit/search state
+window.__SE_CLIENT_TXN_ID = null;
+window.__SE_LAST_SEARCH_STATUS = "";
+window.__SE_EXISTING_PHOTO_LINK = "";
+
 
 
 /* =========================
@@ -1540,15 +1655,6 @@ function setPreviewOnly(dataUrl){
   if (!previewImg) return;
   previewImg.src = dataUrl;
   if (imageContainer) imageContainer.style.display = 'block';
-}
-
-function setPreviewAndCache(dataUrl){
-  setPreviewOnly(dataUrl);
-  __SE_SUBMIT_PHOTO = (dataUrl && dataUrl.startsWith("data:image")) ? dataUrl : "";
-}
-
-function hideOverlayWatermark(){
-  if (watermarkOverlay) watermarkOverlay.style.display = 'none';
 }
 
 function drawWatermarkOnCanvas(ctx, w, h){
@@ -1615,6 +1721,114 @@ function applyGrayscaleContrast(canvas, ctx) {
   ctx.putImageData(imageData, 0, 0);
 }
 
+function adaptiveTone(canvas, ctx){
+  // Lightweight gamma tweak based on mean brightness
+  const w = canvas.width, h = canvas.height;
+  const img = ctx.getImageData(0, 0, w, h);
+  const d = img.data;
+
+  let sum = 0;
+  const n = w * h;
+  for (let i = 0; i < d.length; i += 4) sum += d[i];
+  const mean = sum / Math.max(1, n);
+
+  // Choose gamma: brighten if dark, darken if too bright
+  let gamma = 1.0;
+  if (mean < 105) gamma = 0.85;
+  else if (mean > 185) gamma = 1.12;
+
+  if (gamma !== 1.0){
+    const inv = 1 / gamma;
+    for (let i = 0; i < d.length; i += 4){
+      const v = d[i] / 255;
+      const nv = Math.pow(v, inv) * 255;
+      d[i] = d[i+1] = d[i+2] = nv;
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+}
+
+function sharpenLight(canvas, ctx){
+  // 3x3 sharpen kernel (lightweight) for text clarity
+  const w = canvas.width, h = canvas.height;
+  if (w * h > 1200 * 900) return; // avoid heavy work on very large frames
+
+  const src = ctx.getImageData(0, 0, w, h);
+  const d = src.data;
+  const out = new Uint8ClampedArray(d.length);
+
+  // Kernel: [0,-1,0; -1,5,-1; 0,-1,0]
+  const idx = (x,y) => (y*w + x) * 4;
+
+  for (let y = 1; y < h-1; y++){
+    for (let x = 1; x < w-1; x++){
+      const i = idx(x,y);
+      // grayscale already, so use R
+      const c  = d[i];
+      const l  = d[idx(x-1,y)];
+      const r  = d[idx(x+1,y)];
+      const u  = d[idx(x,y-1)];
+      const dn = d[idx(x,y+1)];
+
+      let v = (5*c - l - r - u - dn);
+      if (v < 0) v = 0;
+      if (v > 255) v = 255;
+
+      out[i] = out[i+1] = out[i+2] = v;
+      out[i+3] = d[i+3];
+    }
+  }
+
+  // Copy borders
+  for (let x = 0; x < w; x++){
+    let i1 = idx(x,0), i2 = idx(x,h-1);
+    out[i1]=d[i1]; out[i1+1]=d[i1+1]; out[i1+2]=d[i1+2]; out[i1+3]=d[i1+3];
+    out[i2]=d[i2]; out[i2+1]=d[i2+1]; out[i2+2]=d[i2+2]; out[i2+3]=d[i2+3];
+  }
+  for (let y = 0; y < h; y++){
+    let i1 = idx(0,y), i2 = idx(w-1,y);
+    out[i1]=d[i1]; out[i1+1]=d[i1+1]; out[i1+2]=d[i1+2]; out[i1+3]=d[i1+3];
+    out[i2]=d[i2]; out[i2+1]=d[i2+1]; out[i2+2]=d[i2+2]; out[i2+3]=d[i2+3];
+  }
+
+  src.data.set(out);
+  ctx.putImageData(src, 0, 0);
+}
+
+function isBlurryFromCanvas(canvas, ctx){
+  // Variance of Laplacian (sampled) on grayscale image
+  const w = canvas.width, h = canvas.height;
+  const img = ctx.getImageData(0, 0, w, h).data;
+
+  // sample stride to keep fast
+  const step = (w * h > 700000) ? 3 : 2;
+  let sum = 0, sum2 = 0, n = 0;
+
+  const get = (x,y) => img[(y*w + x) * 4];
+
+  for (let y = 1; y < h-1; y += step){
+    for (let x = 1; x < w-1; x += step){
+      const c  = get(x,y);
+      const l  = get(x-1,y);
+      const r  = get(x+1,y);
+      const u  = get(x,y-1);
+      const dn = get(x,y+1);
+      const lap = 4*c - l - r - u - dn;
+      sum += lap;
+      sum2 += lap*lap;
+      n++;
+    }
+  }
+
+  const mean = sum / Math.max(1, n);
+  const varr = (sum2 / Math.max(1, n)) - (mean*mean);
+
+  // threshold tuned for phone camera + ID text
+  const preset = DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD;
+  const th = (DOC_MODE.current === 'PASSPORT') ? 85 : 95;
+  return varr < th;
+}
+
 /* =========================
    MYKAD AUTO DASH + VALIDATION
 ========================= */
@@ -1622,17 +1836,57 @@ function applyGrayscaleContrast(canvas, ctx) {
   const mykadInput = document.getElementById('mykadPassport');
   if (!mykadInput) return;
 
+  function formatMykadProgressive(digits){
+    const d = (digits || '').slice(0, 12);
+    if (d.length <= 6) return d;
+    if (d.length <= 8) return d.slice(0, 6) + '-' + d.slice(6);
+    return d.slice(0, 6) + '-' + d.slice(6, 8) + '-' + d.slice(8);
+  }
+
+  function caretFromDigitsCount(formatted, digitsBefore){
+    if (!digitsBefore) return 0;
+    let count = 0;
+    for (let i = 0; i < formatted.length; i++){
+      if (/\d/.test(formatted[i])) count++;
+      if (count >= digitsBefore) return i + 1;
+    }
+    return formatted.length;
+  }
+
+  function caretFromAllowedCount(str, allowedBefore){
+    if (!allowedBefore) return 0;
+    return Math.min(allowedBefore, str.length);
+  }
+
   mykadInput.addEventListener('input', function () {
-    const raw = (this.value || '').toUpperCase().trim();
+    const raw = (this.value || '').toUpperCase();
+
+    const caretPos = this.selectionStart || 0;
+
+    // Detect passport (has letters) vs MyKad (digits only)
+    const alnumBeforeCaret = raw.slice(0, caretPos).replace(/[^A-Z0-9]/g, '');
     const alnum = raw.replace(/[^A-Z0-9]/g, '');
     const hasLetter = /[A-Z]/.test(alnum);
-    const digits = alnum.replace(/[^0-9]/g, '');
 
-    if (!hasLetter && digits.length === 12) {
-      this.value = digits.replace(/(\d{6})(\d{2})(\d{4})/, "$1-$2-$3");
-    } else {
-      this.value = alnum;
+    if (hasLetter){
+      // Passport / mixed: keep alphanumeric only (no dashes)
+      const newVal = alnum;
+      this.value = newVal;
+      const newCaret = caretFromAllowedCount(newVal, alnumBeforeCaret.length);
+      try { this.setSelectionRange(newCaret, newCaret); } catch(e) {}
+      validateMykadPassport();
+      return;
     }
+
+    // MyKad (digits): progressive 6-2-4 with caret preservation
+    const digitsBeforeCaret = raw.slice(0, caretPos).replace(/\D/g, '').length;
+    const digits = raw.replace(/\D/g, '').slice(0, 12);
+    const formatted = formatMykadProgressive(digits);
+
+    this.value = formatted;
+
+    const newCaret = caretFromDigitsCount(formatted, Math.min(digitsBeforeCaret, digits.length));
+    try { this.setSelectionRange(newCaret, newCaret); } catch(e) {}
 
     validateMykadPassport();
   });
@@ -1660,7 +1914,7 @@ function validateMykadPassport() {
   const digits = alnum.replace(/[^0-9]/g, '');
 
   if (digits.length !== 12) {
-    el.setCustomValidity('Mykad 12 digit required');
+    el.setCustomValidity('MyKad must contain 12 digits.');
     return false;
   }
 
@@ -1673,6 +1927,7 @@ function validateMykadPassport() {
 ========================= */
 function openCamera() {
   document.getElementById('cameraModal').style.display = 'flex';
+  setDocMode(DOC_MODE.current);
   startCamera();
 }
 
@@ -1681,6 +1936,33 @@ async function startCamera() {
   try {
     stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
     video.srcObject = stream;
+
+    // Best-effort: lock focus/exposure for clearer OCR (device-dependent)
+    try {
+      const track = stream.getVideoTracks && stream.getVideoTracks()[0];
+      if (track && track.getCapabilities) {
+        const caps = track.getCapabilities();
+        const adv = {};
+
+        if (caps.focusMode && Array.isArray(caps.focusMode)) {
+          if (caps.focusMode.includes('continuous')) adv.focusMode = 'continuous';
+          else if (caps.focusMode.includes('single-shot')) adv.focusMode = 'single-shot';
+        }
+        if (caps.exposureMode && Array.isArray(caps.exposureMode)) {
+          if (caps.exposureMode.includes('continuous')) adv.exposureMode = 'continuous';
+        }
+        if (caps.whiteBalanceMode && Array.isArray(caps.whiteBalanceMode)) {
+          if (caps.whiteBalanceMode.includes('continuous')) adv.whiteBalanceMode = 'continuous';
+        }
+
+        // Apply only if we have anything supported
+        if (Object.keys(adv).length) {
+          await track.applyConstraints({ advanced: [adv] });
+        }
+      }
+    } catch (e) {
+      // silent: not supported on all phones
+    }
 
     await video.play().catch(() => {});
     startOcrLive();
@@ -1940,18 +2222,23 @@ function buildFinalImageFromSourceCrop(drawSourceCropFn, options){
   const outW = info.outW;
   const outH = info.outH;
 
-  // Step B: ratio crop to match preview max height ratio (so preview not clipped)
-  const maxH = Math.max(1, Math.round(outW * PREVIEW_MAX_RATIO));
-  const finalH = Math.min(outH, maxH);
+  // Step B: auto-crop to the target document aspect ratio for better OCR accuracy
+  const preset = (DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD);
+  const targetAR = preset && preset.ar ? preset.ar : 1.585;
+  const desiredH = Math.max(1, Math.round(outW / targetAR));
+  const finalH = Math.min(outH, desiredH);
+  const srcY = Math.max(0, Math.round((outH - finalH) / 2));
 
   __SE_CAPTURE.ensureSize(__SE_CAPTURE.final, outW, finalH);
 
-  // draw from scaled to final (TOP crop, consistent with current overflow behavior)
+  // draw from scaled to final (center crop to keep document centered)
   __SE_CAPTURE.ctxFinal.clearRect(0, 0, outW, finalH);
-  __SE_CAPTURE.ctxFinal.drawImage(__SE_CAPTURE.scaled, 0, 0, outW, finalH, 0, 0, outW, finalH);
+  __SE_CAPTURE.ctxFinal.drawImage(__SE_CAPTURE.scaled, 0, srcY, outW, finalH, 0, 0, outW, finalH);
 
-  // Step C: grayscale+contrast on final (smaller pixels = faster)
+  // Step C: grayscale + adaptive contrast + light sharpening for better OCR accuracy
   applyGrayscaleContrast(__SE_CAPTURE.final, __SE_CAPTURE.ctxFinal);
+  adaptiveTone(__SE_CAPTURE.final, __SE_CAPTURE.ctxFinal);
+  sharpenLight(__SE_CAPTURE.final, __SE_CAPTURE.ctxFinal);
 
   // Step D: watermark burn-in (optional)
   if (burnInWatermark) {
@@ -1959,7 +2246,8 @@ function buildFinalImageFromSourceCrop(drawSourceCropFn, options){
   }
 
   // Step E: encode
-  return __SE_CAPTURE.final.toDataURL('image/jpeg', CAPTURE_JPEG_Q);
+  const presetQ = (DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD).q || CAPTURE_JPEG_Q;
+  return __SE_CAPTURE.final.toDataURL('image/jpeg', presetQ);
 }
 
 function captureImage() {
@@ -1981,8 +2269,10 @@ function captureImage() {
     const safeSW = Math.max(1, Math.min(sw, vw - sx));
     const safeSH = Math.max(1, Math.min(sh, vh - sy));
 
-    // downscale target
-    const outW = Math.min(CAPTURE_MAX_W, safeSW);
+    // downscale target (smart per document type)
+    const preset = DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD;
+    const maxW = preset.maxW || CAPTURE_MAX_W;
+    const outW = Math.min(maxW, safeSW);
     const scale = outW / safeSW;
     const outH = Math.max(1, Math.round(safeSH * scale));
 
@@ -1997,17 +2287,31 @@ function captureImage() {
 
   if (!cleanDataUrl) return;
 
-  // Create watermarked version for Drive/submit (burn-in) without affecting OCR
+  // Blur check: if the image is blurry, require a retake before running OCR.
+  try{
+    const blurry = isBlurryFromCanvas(__SE_CAPTURE.final, __SE_CAPTURE.ctxFinal);
+    if (blurry){
+      safeSwalFire({
+        icon: 'warning',
+        title: 'IMAGE BLUR',
+        text: 'PLEASE RETAKE THE ID PHOTO (HOLD STEADY)',
+        confirmButtonText: 'RETAKE'
+      });
+      return;
+    }
+  } catch(e) {}
+
+  // Create a watermarked version for Drive/submission without affecting OCR.
   const watermarkedDataUrl = (() => {
     const w = __SE_CAPTURE.final.width;
     const h = __SE_CAPTURE.final.height;
     drawWatermarkOnCanvas(__SE_CAPTURE.ctxFinal, w, h);
-    return __SE_CAPTURE.final.toDataURL('image/jpeg', CAPTURE_JPEG_Q);
+    const presetQ = (DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD).q || CAPTURE_JPEG_Q;
+        return __SE_CAPTURE.final.toDataURL('image/jpeg', presetQ);
   })();
 
   if (watermarkOverlay) watermarkOverlay.style.display = '';
   setPreviewOnly(cleanDataUrl);
-  __SE_OCR_PHOTO = cleanDataUrl;
   __SE_SUBMIT_PHOTO = (watermarkedDataUrl && watermarkedDataUrl.startsWith("data:image")) ? watermarkedDataUrl : "";
 
   closeCameraModal();
@@ -2016,31 +2320,64 @@ function captureImage() {
     try {
       document.body.style.cursor = 'progress';
 
-      const res = await fetch(VISION_PROXY_URL, {
+      const res = await fetch(OCR_WORKER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: cleanDataUrl.split(",")[1] })
       });
 
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+
       const result = await res.json();
       document.body.style.cursor = 'default';
-
-      if (result.name) {
-        const rawName   = result.name.toUpperCase().trim();
-        const cleanName = filterNonNameWords(rawName);
-        document.getElementById('namePassport').value = cleanName;
+      
+      if (result.error) {
+        throw new Error("AI Message: " + result.message);
       }
-      if (result.idnum) {
-        const icEl = document.getElementById('mykadPassport');
-        if (icEl) {
-          icEl.value = result.idnum.toUpperCase();
-          icEl.dispatchEvent(new Event('input'));
+
+      // Continue only if Gemini returned a name or an ID number.
+      if (result.name || result.idnum) {
+        if (result.name) {
+          const rawName = result.name.toUpperCase().trim();
+          // Use the existing filterNonNameWords function in this index.html
+          const cleanName = filterNonNameWords(rawName);
+          document.getElementById('namePassport').value = cleanName;
         }
+        
+        if (result.idnum) {
+          const icEl = document.getElementById('mykadPassport');
+          if (icEl) {
+            icEl.value = result.idnum.toUpperCase();
+            // Trigger the input event so the MyKad auto-format function runs
+            icEl.dispatchEvent(new Event('input'));
+          }
+        }
+
+        // Show a small success toast.
+        Swal.fire({
+          toast: true,
+          position: 'top',
+          icon: 'success',
+          title: 'AUTOFILL SUCCESSFUL',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      } else {
+        throw new Error("No usable data was found in the image.");
       }
 
     } catch (err) {
       document.body.style.cursor = 'default';
-      alert("Autofill GAGAL: " + err.message);
+      console.error("Autofill Error:", err);
+      // Show an error notification if autofill fails.
+      Swal.fire({
+        icon: 'error',
+        title: 'AUTOFILL FAILED',
+        text: err.message || 'Please fill in the form manually.',
+        confirmButtonText: 'OK'
+      });
     }
   })();
 }
@@ -2056,8 +2393,8 @@ document.getElementById('imageInput').addEventListener('change', function(event)
   reader.onload = function() {
     const img = new window.Image();
     img.onload = async function() {
-      // Keep original behavior: treat input image as max 800px width,
-      // crop middle 60% height, then process (ratio crop + grayscale + watermark).
+      // Preserve the current behavior: limit the input image to 800px width,
+      // crop the middle 60% of the height, then process it (ratio crop + grayscale + watermark).
       const srcW = img.width;
       const srcH = img.height;
 
@@ -2067,7 +2404,10 @@ document.getElementById('imageInput').addEventListener('change', function(event)
       const cropY = Math.max(0, Math.round((srcH - cropH) / 2));
 
       const baseOutW = Math.min(800, cropW);
-      const outW = Math.min(CAPTURE_MAX_W, baseOutW);
+
+      const preset = DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD;
+      const maxW = preset.maxW || CAPTURE_MAX_W;
+      const outW = Math.min(maxW, baseOutW);
       const s = outW / cropW;
       const outH = Math.max(1, Math.round(cropH * s));
 
@@ -2086,28 +2426,52 @@ document.getElementById('imageInput').addEventListener('change', function(event)
 
       if (!cleanDataUrl) return;
 
-      // Create watermarked version for Drive/submit (burn-in) without affecting OCR
+      // Blur check: if the image is blurry, ask the user to retake or reselect it before OCR.
+      try{
+        const blurry = isBlurryFromCanvas(__SE_CAPTURE.final, __SE_CAPTURE.ctxFinal);
+        if (blurry){
+          await safeSwalFire({
+            icon: 'warning',
+            title: 'IMAGE BLUR',
+            text: 'PLEASE RETAKE OR SELECT A CLEARER PHOTO',
+            confirmButtonText: 'OK'
+          });
+          event.target.value = '';
+          return;
+        }
+      } catch(e) {}
+
+      // Create a watermarked version for Drive/submission without affecting OCR.
       const watermarkedDataUrl = (() => {
         const w = __SE_CAPTURE.final.width;
         const h = __SE_CAPTURE.final.height;
         drawWatermarkOnCanvas(__SE_CAPTURE.ctxFinal, w, h);
-        return __SE_CAPTURE.final.toDataURL('image/jpeg', CAPTURE_JPEG_Q);
+        const presetQ = (DOC_MODE.presets[DOC_MODE.current] || DOC_MODE.presets.CARD).q || CAPTURE_JPEG_Q;
+        return __SE_CAPTURE.final.toDataURL('image/jpeg', presetQ);
       })();
 
       if (watermarkOverlay) watermarkOverlay.style.display = '';
       setPreviewOnly(cleanDataUrl);
-      __SE_OCR_PHOTO = cleanDataUrl;
       __SE_SUBMIT_PHOTO = (watermarkedDataUrl && watermarkedDataUrl.startsWith("data:image")) ? watermarkedDataUrl : "";
 
       try {
         document.body.style.cursor = 'progress';
-        const res = await fetch(VISION_PROXY_URL, {
+        const res = await fetch(OCR_WORKER_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ image: cleanDataUrl.split(",")[1] })
         });
+
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+
         const result = await res.json();
         document.body.style.cursor = 'default';
+
+        if (result.error) {
+          throw new Error("AI Message: " + result.message);
+        }
 
         if (result.name) {
           const rawName   = result.name.toUpperCase().trim();
@@ -2121,9 +2485,18 @@ document.getElementById('imageInput').addEventListener('change', function(event)
             icEl.dispatchEvent(new Event('input'));
           }
         }
+
+        if (!result.name && !result.idnum) {
+          throw new Error("No usable data was found in the image.");
+        }
       } catch (err) {
         document.body.style.cursor = 'default';
-        alert("Autofill GAGAL: " + err.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'AUTOFILL FAILED',
+          text: err.message || 'Please fill in the form manually.',
+          confirmButtonText: 'OK'
+        });
       }
     };
     img.src = reader.result;
@@ -2133,20 +2506,11 @@ document.getElementById('imageInput').addEventListener('change', function(event)
 
 /* =========================
    PREVIEW CACHE / LEGACY
-   (now: Drive image == Preview image)
+   (Drive image now matches the preview image)
 ========================= */
 function getVisibleCroppedImageData() {
-  // For compatibility: prefer using cached final image
+  // For compatibility, prefer the cached final image.
   return __SE_SUBMIT_PHOTO || (previewImg && previewImg.src && previewImg.src.startsWith("data:image") ? previewImg.src : "");
-}
-
-function cacheFinalPreviewImage() {
-  try {
-    const data = getVisibleCroppedImageData();
-    if (data && typeof data === "string" && data.startsWith("data:image")) {
-      __SE_SUBMIT_PHOTO = data;
-    }
-  } catch (e) {}
 }
 
 /* =========================
@@ -2182,7 +2546,7 @@ function updateCallLink() {
   const digits = raw.replace(/[^0-9]/g, '');
 
   if (digits && digits.length < 10) {
-    contactEl.setCustomValidity('Minimum 10 digit required');
+    contactEl.setCustomValidity('At least 10 digits are required.');
   } else {
     contactEl.setCustomValidity('');
   }
@@ -2209,7 +2573,7 @@ reasonOther.required = false;
 
 remarkSelect.addEventListener('change', function() {
   const val = this.value.toUpperCase();
-  const isResident = (val === 'OWNER' || val === 'TENANT' || val === 'PEDESTRIAN B1');
+  const isResident = (val === 'OWNER' || val === 'TENANT');
 
   unitField.style.display     = isResident ? 'block' : 'none';
   reasonSection.style.display = isResident ? 'block' : 'none';
@@ -2226,16 +2590,13 @@ remarkSelect.addEventListener('change', function() {
     reasonOther.value = "";
   }
 
-  const isOtherCat = (val === 'OTHER' || val === 'RESTAURANT DELIVERY');
-  otherField.style.display = isOtherCat ? 'block' : 'none';
-  otherField.required = isOtherCat;
+  const needsSpecify = (val === 'OTHER' || val === 'RESTAURANT DELIVERY');
+  otherField.style.display = needsSpecify ? 'block' : 'none';
+  otherField.required = needsSpecify;
 
-  if (isOtherCat) {
-    otherField.placeholder = 'PLEASE SPECIFY';
-  } else {
+  if (!needsSpecify) {
     otherField.value = "";
     otherField.required = false;
-    otherField.placeholder = 'PLEASE SPECIFY';
   }
   // keep placeholder color in sync
   setSelectPlaceholder(this);
@@ -2317,7 +2678,7 @@ document.getElementById('unitNumber').addEventListener('input', function() {
    NAME CLEANER
 ========================= */
 const NON_NAME_WORDS = [
-  "MALAYSIA", "MALAYSIA P", "KAD PENGENALAN", "IDENTITY CARD", "MYKAD", "ID", "PASSPORT",
+  "MALAYSIA", "MALAYSIA P", "KAD PENGENALAN", "IDENTITY CARD", "MYKAD", "ID", "I.D", "PASSPORT",
   "WARGANEGARA", "LELAKI", "PEREMPUAN", "ISLAM", "CHRISTIAN", "BUDDHA", "HINDU",
   "AGAMA", "MALE", "FEMALE", "JANTINA", "NATIONALITY", "CITIZENSHIP", "LICENCE",
   "LESEN MEMANDU", "DRIVING LICENCE", "VOCATIONAL LICENCE", "DIGITAL", "GOVERNMENT", "CLASS",
@@ -2326,7 +2687,11 @@ const NON_NAME_WORDS = [
 
   "JOHOR", "KEDAH", "KELANTAN", "MELAKA", "MELAKA TENGAH", "NEGERI SEMBILAN", "PAHANG", "PERAK",
   "PERLIS", "PULAU PINANG", "PENANG", "SABAH", "SARAWAK", "SELANGOR", "TERENGGANU", "WILAYAH PERSEKUTUAN",
-  "KUALA LUMPUR", "PUTRAJAYA", "LABUAN"
+  "KUALA LUMPUR", "PUTRAJAYA", "LABUAN",
+
+  "JENDERAM HILIR", "SOUTHVILLE CITY", "TMN SALAK JAYA", "WANGSA MAJU", "VISTA SERI PUTRA", "ALAM SARI", "PT BUNTAR", "SLIP PEMBAHARUAN", 
+  "PEKAN KAJANG", "BRIVING", "SAUJANA UTAMA 3", "TANJUNG KERAMAT", "LENGKAP FULL NAME", "NAMA/NAME:", "RALS CLE", "ECO MAJESTIC", "IDENTITY CARD",
+  "SETIA ECOHILL", "PARIT JAWA", "LESEN KENDERAAN MOTOR", "KERAMAT HUJUNG", "BRIVING", "REPUBLIC OF CHINA", "PUBLIC TRANSPORT AGENCY", "DENTITY CARD"
 ];
 
 function filterNonNameWords(text) {
@@ -2348,7 +2713,7 @@ function filterNonNameWords(text) {
     const looksNameish = (s) => {
       const u = String(s || "").toUpperCase().trim();
       if (!u) return false;
-      if (/\d/.test(u)) return false; 
+      if (/\d/.test(u)) return false;
       if (/\b(ALAMAT|ADDRESS|NO\.?|LOT|KG\.?|KAMPUNG|JALAN|PANGSAPURI|PEKAN|LORONG|TAMAN|TMN|BANDAR|SEKSYEN|PERSIARAN|POSKOD|POSTCODE|\d{5})\b/.test(u)) return false;
       return u.length >= 2;
     };
@@ -2411,7 +2776,7 @@ function filterNonNameWords(text) {
   let t = normalizeForFilter(text);
 
   const ADDRESS_CUTOFF_REGEX =
-    /\b(ALAMAT|ADDRESS|NO\.?|JALAN|PANGSAPURI|PEKAN|LORONG|TAMAN|TMN|KAMPUNG|BANDAR|SEKSYEN|PERSIARAN|APARTMENT|APARTMEN|FLAT|RESIDENSI|HEIGHTS?|HEIGHT)\b/;
+    /\b(ALAMAT|ADDRESS|NO\.?|JALAN|PANGSAPURI|PEKAN|LORONG|TAMAN|TMN|KAMPUNG|KG|BANDAR|SEKSYEN|PERSIARAN|APARTMENT|APARTMEN|FLAT|RESIDENSI|HEIGHTS?|HEIGHT)\b/;
 
   const addrIdx = t.search(ADDRESS_CUTOFF_REGEX);
   if (addrIdx !== -1) {
@@ -2476,19 +2841,28 @@ function detectSearchField(raw) {
   const digitsOnly = s.replace(/[^0-9]/g, "");
   const alnumOnly  = s.replace(/[^A-Z0-9]/g, "");
 
+  // Strong ID signals
   if (digitsOnly.length === 12 && !/[A-Z]/.test(alnumOnly)) return FIELD.ID;
   if (/^\d{6}-\d{2}-\d{4}$/.test(s)) return FIELD.ID;
-
   if (/^[A-Z]{1,3}\d{6,}[A-Z]{3}$/.test(alnumOnly)) return FIELD.ID;
   if (/^[A-Z]{1,3}\d{6,}$/.test(alnumOnly)) return FIELD.ID;
 
+  // Strong REG signals
   if (/^[A-Z]{1,3}\d{4}[A-Z]?$/.test(alnumOnly)) return FIELD.REG;
 
-  return "";
+  // Fallback (always return one field to keep search single-pass)
+  return (/[A-Z]/.test(alnumOnly) ? FIELD.REG : FIELD.ID);
 }
 
 async function searchRecord(field, value) {
   const cacheKey = `SE_SRCH_${field}|${value}`;
+
+  // Micro-cache results (very short TTL) to speed up repeated lookups
+  if (!window.__SE_SEARCH_CACHE) window.__SE_SEARCH_CACHE = new Map();
+  const cached = window.__SE_SEARCH_CACHE.get(cacheKey);
+  if (cached && (Date.now() - cached.t) < 15000) {
+    return cached.v;
+  }
 
   if (!window.__SE_SEARCH_INFLIGHT) window.__SE_SEARCH_INFLIGHT = new Map();
   if (window.__SE_SEARCH_INFLIGHT.has(cacheKey)) {
@@ -2499,7 +2873,7 @@ async function searchRecord(field, value) {
     const url = `${WORKER_URL}?field=${encodeURIComponent(field)}&value=${encodeURIComponent(value)}`;
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 9000);
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
 
     try {
       const res = await fetch(url, {
@@ -2513,8 +2887,10 @@ async function searchRecord(field, value) {
         throw new Error(`Search failed (${res.status}): ${msg || res.statusText}`);
       }
 
-      return await res.json();
-    } finally {
+      const js = await res.json();
+      window.__SE_SEARCH_CACHE.set(cacheKey, { t: Date.now(), v: js });
+      return js;
+} finally {
       clearTimeout(timeoutId);
     }
   })();
@@ -2568,29 +2944,79 @@ async function handleUniversalSearch() {
     let hasHyperlink = false;
     let res;
 
-    if (detectedField) {
-      res = await searchRecord(detectedField, valueNorm);
+    // STRICT single-pass search:
+    // Use autodetect (REGNUM vs MYKAD/PASSPORT) and search only that column.
+    const usedField = detectedField;
 
-      if (res && res.exist) {
-        found = res.data || null;
-        hasHyperlink = res.hasHyperlink ?? false;
-      }
+    res = await searchRecord(usedField, valueNorm);
+
+    if (res && res.exist) {
+      found = res.data || null;
+      hasHyperlink = res.hasHyperlink ?? false;
     }
 
-    if (!found && !detectedField) {
-      const guessField = (/[A-Z]/.test(valueNorm) ? FIELD.REG : FIELD.ID);
+    // Verification gate: prevent mismatched record from being treated as FOUND/EXPIRED
 
-      res = await searchRecord(guessField, valueNorm);
-      if (res && res.exist) {
-        found = res.data || null;
-        hasHyperlink = res.hasHyperlink ?? false;
+    if (found) {
+      const returnedRegNorm = normalize(found.regnum || "");
+      const returnedIdNorm  = normalize(found.mykadPassport || "");
+
+      let isMatch = true;
+      if (usedField === FIELD.REG) {
+        // Only treat as mismatch when backend actually returns a REG value and it differs
+        isMatch = returnedRegNorm ? (returnedRegNorm === valueNorm) : true;
+      } else if (usedField === FIELD.ID) {
+        // Only treat as mismatch when backend actually returns an ID value and it differs
+        isMatch = returnedIdNorm ? (returnedIdNorm === valueNorm) : true;
+      } else {
+        // Unknown field: require mismatch only if at least one identifier is present
+        if (returnedRegNorm || returnedIdNorm) {
+          isMatch = (returnedRegNorm === valueNorm) || (returnedIdNorm === valueNorm);
+        } else {
+          isMatch = true;
+        }
+      }
+
+      if (!isMatch) {
+        const searched = (originalInput || "").toUpperCase();
+        const returnedRaw = (usedField === FIELD.REG ? (found.regnum || "") : (found.mykadPassport || "")) || (found.regnum || found.mykadPassport || "");
+        const returnedDisp = (returnedRaw || "").toUpperCase();
+
+        await safeSwalFire({
+          title: 'MISMATCH DETECTED',
+          text: 'The returned record does not match your search. Please try again.',
+          html: `
+            <div style="text-align:left; line-height:1.45;">
+              <div><b>YOU SEARCHED:</b> ${searched}</div>
+              <div style="margin-top:6px;"><b>RECORD RETURNED:</b> ${returnedDisp || 'UNKNOWN'}</div>
+              <div style="margin-top:10px;">Please try again.</div>
+            </div>
+          `,
+          icon: 'warning',
+          confirmButtonText: 'TRY AGAIN',
+          background: 'linear-gradient(135deg, #fff9e6 0%, #ffecb3 45%, #ffd54f 100%)',
+          color: '#176B39',
+          width: 300,
+          customClass: { popup: 'shadow-2xl px-7 pt-7 pb-6' },
+          willOpen: popup => { popup.style.borderRadius = "14px"; }
+        });
+
+        try {
+          inputEl.focus();
+          if (inputEl.select) inputEl.select();
+        } catch (e) {}
+
+        return;
       }
     }
 
     if (found && !hasHyperlink) {
+      window.__SE_LAST_SEARCH_STATUS = 'EXPIRED';
+      window.__SE_EXISTING_PHOTO_LINK = '';
+
       safeSwalFire({
         title: 'PREVIOUS RECORD EXPIRED',
-        text: 'Please retake id photo',
+        text: 'Please retake the ID photo.',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'OK',
@@ -2618,9 +3044,12 @@ async function handleUniversalSearch() {
     }
 
     if (found) {
+      window.__SE_LAST_SEARCH_STATUS = 'FOUND';
+      window.__SE_EXISTING_PHOTO_LINK = (found && (found.photoLink || found.photoURL || found.photoUrl || found.existingPhotoLink || '')) ? String(found.photoLink || found.photoURL || found.photoUrl || found.existingPhotoLink).trim() : '';
+
       safeSwalFire({
         title: 'RECORD FOUND',
-        text: 'Autofill this form with record details?',
+        text: 'Autofill this form with the existing record details?',
         icon: 'success',
         showCancelButton: true,
         confirmButtonText: 'YES',
@@ -2648,9 +3077,12 @@ async function handleUniversalSearch() {
       return;
     }
 
+    window.__SE_LAST_SEARCH_STATUS = 'NO_RECORD';
+    window.__SE_EXISTING_PHOTO_LINK = '';
+
     safeSwalFire({
       title: 'NO PREVIOUS RECORD',
-      text: 'Please proceed to register',
+      text: 'Please proceed with registration.',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'OK',
@@ -2684,7 +3116,7 @@ async function handleUniversalSearch() {
     safeSwalFire({
       title: 'ERROR',
       text: isAbort
-        ? 'Connection timeout / interrupted. Please try again.'
+        ? 'Connection timed out or was interrupted. Please try again.'
         : (err?.message || 'Please try again'),
       icon: 'error',
       confirmButtonText: 'OK'
@@ -2715,8 +3147,8 @@ function autofillForm(data) {
   }
 
   if (data.remark) {
-    let matchOwnerTenant = data.remark.match(/^(OWNER|TENANT|PEDESTRIAN B1)/i);
-    let matchOther = data.remark.match(/^(OTHER|RESTAURANT DELIVERY)\s*\((.*)\)$/i);
+    let matchOwnerTenant = data.remark.match(/^(OWNER|TENANT)/i);
+    let matchOther = data.remark.match(/^OTHER\s*\(/i);
 
     if (matchOwnerTenant) {
       document.getElementById('remark').value = matchOwnerTenant[1].toUpperCase();
@@ -2726,12 +3158,12 @@ function autofillForm(data) {
       if (unitMatch) document.getElementById('unitNumber').value = unitMatch[1];
 
     } else if (matchOther) {
-      document.getElementById('remark').value = (matchOther[1] || "OTHER").toUpperCase();
+      document.getElementById('remark').value = "OTHER";
       document.getElementById('remark').dispatchEvent(new Event('change'));
 
       const otherEl = document.getElementById('otherCategory');
       if (otherEl) {
-        otherEl.value = (matchOther[2] || "").trim();
+        otherEl.value = "";
       }
 
       document.getElementById('unitNumber').value = "";
@@ -2743,22 +3175,261 @@ function autofillForm(data) {
       document.getElementById('remark').dispatchEvent(new Event('change'));
     }
   }
+
+  // Tower
+  // NOTE: Tower is intentionally not auto-filled from the previous record.
+
+
+  // Reason (supports: OTHER ( xxx )  + {reason:'OTHER', reasonOther:'xxx'} + case-insensitive option match)
+  {
+    const rSel = document.getElementById('reasonSelect');
+    const rOther = document.getElementById('reasonOther');
+    const rawReason = (data && data.reason != null) ? String(data.reason).trim() : "";
+    const rawOther  = (data && data.reasonOther != null) ? String(data.reasonOther).trim() : "";
+
+    if (rSel && (rawReason || rawOther)) {
+      let main = rawReason;
+      let other = "";
+
+      const mOther = rawReason.match(/^OTHER\s*\(\s*([^\)]+)\s*\)$/i);
+      if (mOther) {
+        main = "Other";
+        other = (mOther[1] || "");
+      } else if (/^OTHER$/i.test(rawReason) && rawOther) {
+        main = "Other";
+        other = rawOther;
+      } else {
+        // Standard reason
+        other = "";
+      }
+
+      // Find matching option by value (case-insensitive) so it works even if backend returns UPPERCASE
+      const want = (main || "").trim();
+      const wantU = want.toUpperCase();
+
+      let matchedValue = "";
+      if (wantU) {
+        const opts = Array.from(rSel.options || []);
+        const hit = opts.find(o => String(o.value || "").trim().toUpperCase() === wantU);
+        if (hit) matchedValue = hit.value;
+      }
+
+      rSel.value = matchedValue || want;
+
+      // Trigger show/hide logic for "Other"
+      rSel.dispatchEvent(new Event('change'));
+
+      if (rOther) {
+        if (String(rSel.value || "").trim().toUpperCase() === "OTHER") {
+          rOther.value = (other || "").toUpperCase();
+        } else if (String(rSel.value || "").trim() === "Other") {
+          rOther.value = (other || "").toUpperCase();
+        } else {
+          rOther.value = "";
+        }
+      }
+    }
+  }
+
+
 }
 
 /* =========================
    SUBMIT
 ========================= */
-const urlCloudflareWorker = WORKER_URL;
 let __SE_isSubmitting = false;
+let __seActiveToastEl = null; // track current toast target for auto-hide on edit
 
+// SweetAlert toast for the FIRST invalid field (Option A)
+function __seIsVisible(el){
+  if (!el) return false;
+  if (el.disabled) return false;
+  // Hidden via display:none or removed from layout.
+  if (!el.getClientRects || el.getClientRects().length === 0) return false;
+  const cs = window.getComputedStyle ? getComputedStyle(el) : null;
+  if (cs && (cs.display === 'none' || cs.visibility === 'hidden' || cs.opacity === '0')) return false;
+  return true;
+}
+
+function __seGetLabelText(el){
+  const id = el && el.id ? el.id : '';
+  if (id) {
+    const lbl = document.querySelector(`label[for="${CSS.escape(id)}"]`);
+    if (lbl) return (lbl.textContent || '').trim();
+  }
+  // Fallbacks: placeholder / aria-label / humanized id or name (for example reasonOther -> REASON OTHER).
+  const ph = (el && el.getAttribute) ? (el.getAttribute('placeholder') || '').trim() : '';
+  if (ph) return ph.trim();
+  const aria = (el && el.getAttribute) ? (el.getAttribute('aria-label') || '').trim() : '';
+  if (aria) return aria.trim();
+  const raw = (id || (el && el.name) || '').toString();
+  if (raw) {
+    return raw
+      .replace(/[_-]+/g, ' ')
+      .replace(/([a-z])([A-Z])/g, '$1 $2')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toUpperCase();
+  }
+  return 'FIELD';
+}
+
+function __seFirstInvalid(formEl){
+  if (!formEl) return null;
+  const els = formEl.querySelectorAll('input, select, textarea');
+  for (const el of els) {
+    if (!__seIsVisible(el)) continue;
+
+    // refresh custom validators (no native tooltip)
+    try { if (el.id === 'mykadPassport') validateMykadPassport(); } catch (e) {}
+    try { if (el.id === 'contact') updateCallLink(); } catch (e) {}
+
+    // Use validity API (does NOT trigger native bubble)
+    if (el.willValidate && el.validity && el.validity.valid === false) return el;
+  }
+  return null;
+}
+
+function __seToastGeom(el){
+  try {
+    const r = el.getBoundingClientRect();
+    const viewportW = window.innerWidth || document.documentElement.clientWidth || 360;
+
+    // Center horizontally on the field
+    const centerX = r.left + (r.width / 2);
+
+    // Width: follow field but keep readable and not too wide
+    const maxW = Math.min(viewportW - 16, 560);
+    const width = Math.max(260, Math.min(maxW, r.width));
+
+    // Clamp centerX so the toast stays within viewport
+    const half = width / 2;
+    const clampedCenterX = Math.max(8 + half, Math.min(viewportW - 8 - half, centerX));
+
+    return { centerX: clampedCenterX, width };
+  } catch (e) {
+    const vw = (window.innerWidth||360);
+    const w = Math.min(vw-16, 360);
+    return { centerX: vw/2, width: w };
+  }
+}
+
+function __seShowInvalidToast(el){
+  const label = __seGetLabelText(el);
+  const msgRaw = (el && el.validationMessage) ? el.validationMessage : '';
+  const msg = msgRaw || 'Required';
+  const title = `${label}: ${msg}`;
+
+  // Blink + focus (overrides green glow)
+  const formEl = document.getElementById('registrationForm');
+  if (formEl) formEl.querySelectorAll('.se-invalid-blink').forEach(x => x.classList.remove('se-invalid-blink'));
+  try { el.classList.add('se-invalid-blink'); } catch (e) {}
+  try { el.focus({ preventScroll: false }); } catch (e) { try { el.focus(); } catch (e2) {} }
+  try { el.scrollIntoView({ behavior: 'auto', block: 'center' }); } catch (e) {}
+
+  // Small SweetAlert2 toast
+  if (window.Swal && typeof Swal.fire === 'function') {
+    try { Swal.close(); } catch (e) {}
+    const g = __seToastGeom(el);
+    setTimeout(() => {
+      const g = __seToastGeom(el);
+      try { Swal.close(); } catch (e) {}
+      Swal.fire({
+        toast: true,
+        position: 'top',
+        icon: 'warning',
+        title: title,
+        showConfirmButton: false,
+        // No timer: auto hide only when user starts editing
+        didOpen: (toast) => {
+          try {
+            __seActiveToastEl = el;
+
+            const c = Swal.getContainer();
+            try { if (c) c.classList.add('se-toast-near'); } catch (e) {}
+
+            // Re-measure after render for accurate placement
+            const tr = el.getBoundingClientRect();
+            const toastH = (toast && toast.getBoundingClientRect) ? toast.getBoundingClientRect().height : 70;
+
+            const header = document.querySelector('.fixed-header');
+            const safeTop = (header ? header.offsetHeight : 0) + 6;
+
+            // Desired: just above the field (like Tower screenshot)
+            let top = tr.top - toastH - 10;
+
+            // If not enough room above, place below (fallback only)
+            if (top < safeTop) top = tr.bottom + 10;
+
+            // Keep inside viewport
+            const vh = window.innerHeight || document.documentElement.clientHeight || 640;
+            if (top > vh - toastH - 6) top = Math.max(safeTop, vh - toastH - 6);
+
+            if (c && g) {
+              c.style.position = 'fixed';
+              c.style.top = top + 'px';
+              c.style.left = g.centerX + 'px';
+              c.style.transform = 'translateX(-50%)';
+              c.style.right = 'auto';
+              c.style.bottom = 'auto';
+              c.style.width = g.width + 'px';
+              c.style.padding = '0';
+              c.style.margin = '0';
+              c.style.pointerEvents = 'none';
+            }
+            if (toast) {
+              toast.style.width = '100%';
+              toast.style.margin = '0';
+              toast.style.pointerEvents = 'auto';
+            }
+          } catch (e) {}
+          try { toast.addEventListener('click', () => Swal.close()); } catch (e) {}
+        }
+      });
+    }, 60);
+  } else {
+    // Fallback
+    alert(title);
+  }
+}
+
+// Auto-remove blink + auto-hide toast when user starts fixing the field
+function __seCloseToastOnEdit(target){
+  try {
+    if (target && target.classList && target.classList.contains('se-invalid-blink')) {
+      target.classList.remove('se-invalid-blink');
+    }
+  } catch (e) {}
+
+  // Close the current toast only when the user edits the same invalid field
+  try {
+    if (__seActiveToastEl && target === __seActiveToastEl && window.Swal) {
+      Swal.close();
+      __seActiveToastEl = null;
+    }
+  } catch (e) {}
+}
+
+document.addEventListener('input', (ev) => __seCloseToastOnEdit(ev && ev.target), true);
+document.addEventListener('change', (ev) => __seCloseToastOnEdit(ev && ev.target), true);
+
+function __seEnsureNoValidate(){
+  const f = document.getElementById('registrationForm');
+  if (!f) return;
+  try { f.noValidate = true; } catch (e) {}
+  try { f.setAttribute('novalidate','novalidate'); } catch (e) {}
+}
+__seEnsureNoValidate();
 document.getElementById("registrationForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   try { validateMykadPassport(); } catch (e) {}
   try { updateCallLink(); } catch (e) {}
 
-  if (!this.checkValidity()) {
-    this.reportValidity();
+  // Option A: Small SweetAlert toast for the first invalid field (no native tooltip)
+  const firstBad = __seFirstInvalid(this);
+  if (firstBad) {
+    __seShowInvalidToast(firstBad);
     return;
   }
 
@@ -2767,7 +3438,28 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
 
   setSubmitBtnLoading(true);
 
-  const croppedImage = __SE_SUBMIT_PHOTO || getVisibleCroppedImageData();
+  // Stable device ID for backend troubleshooting and deduplication analytics.
+  const deviceId = (() => {
+    try {
+      const k = 'SE_DEVICE_ID';
+      let v = localStorage.getItem(k);
+      if (!v) {
+        v = (crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2));
+        localStorage.setItem(k, v);
+      }
+      return v;
+    } catch (e) {
+      return '';
+    }
+  })();
+
+  // Keep the same client transaction ID for the same submit attempt to avoid duplicate inserts on retry.
+  if (!window.__SE_CLIENT_TXN_ID) {
+    window.__SE_CLIENT_TXN_ID = (crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2));
+  }
+  const clientTxnId = window.__SE_CLIENT_TXN_ID;
+
+  const croppedImage = getVisibleCroppedImageData();
 
   let remarkValue = document.getElementById('remark').value;
   let otherCategoryVal = document.getElementById('otherCategory').value.trim();
@@ -2775,42 +3467,58 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
   let reasonVal = document.getElementById('reasonSelect').value;
   let reasonOtherVal = document.getElementById('reasonOther').value.trim();
 
-  if (remarkValue === "OTHER" && otherCategoryVal) {
-    remarkValue = `OTHER ( ${otherCategoryVal} )`;
-  } else if ((remarkValue === "OWNER" || remarkValue === "TENANT" || remarkValue === "PEDESTRIAN B1") && unitNumberVal) {
+  if ((remarkValue === "OTHER" || remarkValue === "RESTAURANT DELIVERY") && otherCategoryVal) {
+    remarkValue = `${remarkValue} ( ${otherCategoryVal} )`;
+  } else if ((remarkValue === "OWNER" || remarkValue === "TENANT") && unitNumberVal) {
     remarkValue = `${remarkValue} ( ${unitNumberVal} )`;
   }
 
-  let reasonFinal = "";
-  if ((remarkValue.includes("OWNER") || remarkValue.includes("TENANT") || remarkValue.includes("PEDESTRIAN B1")) && reasonVal) {
-    if (reasonVal === "Other" && reasonOtherVal) {
-      reasonFinal = `OTHER ( ${reasonOtherVal} )`;
-    } else {
-      reasonFinal = reasonVal.toUpperCase();
-    }
-  }
+  const existingPhotoLink = (window.__SE_EXISTING_PHOTO_LINK || '').toString().trim();
 
+  // Require photo only when no existing hyperlink to reuse
+  if (!croppedImage && !existingPhotoLink) {
+    safeSwalFire({
+      title: 'ID PHOTO REQUIRED',
+      text: 'Please take an ID photo before submitting.',
+      icon: 'warning',
+      confirmButtonText: 'OK'
+    });
+    setSubmitBtnLoading(false);
+    __SE_isSubmitting = false;
+    return;
+  }
   const data = {
+    clientTxnId,
+    deviceId,
+
     namePassport: document.getElementById('namePassport').value,
     mykadPassport: document.getElementById('mykadPassport').value,
     regnum: document.getElementById('regnum').value,
     contact: document.getElementById('contact').value,
     remark: remarkValue,
-    reason: reasonFinal,
+
+    // Keep separate values for backend storage (D1 columns).
+    unitNumber: unitNumberVal,
+    reason: reasonVal,
+    reasonOther: reasonOtherVal,
+
     tower: document.getElementById('tower').value,
-    imageUrl: croppedImage
+
+    // Include imageUrl only when a new capture exists.
+    imageUrl: croppedImage || ''
   };
 
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 20000);
+  const timeoutId = setTimeout(() => controller.abort(), 30000);
 
   try {
-    const res = await fetch(urlCloudflareWorker, {
+    const res = await fetch(WORKER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
       cache: "no-store",
-      keepalive: true,
+      // keepalive can fail on iPad/Safari when the payload is large (when imageUrl exists)
+      keepalive: !(data && data.imageUrl),
       signal: controller.signal
     });
 
@@ -2831,7 +3539,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     if (respData && respData.success) {
       safeSwalFire({
         title: 'SUCCESS!',
-        text: 'Data submitted!',
+        text: 'Data submitted successfully!',
         icon: 'success',
         confirmButtonText: 'OK',
         background: 'linear-gradient(135deg,#e9f5e9,#fff,#d5ffe0)',
@@ -2857,7 +3565,9 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
       if (previewImg) previewImg.src = "#";
       if (imageContainer) imageContainer.style.display = 'none';
       __SE_SUBMIT_PHOTO = "";
-      __SE_OCR_PHOTO = "";
+      window.__SE_CLIENT_TXN_ID = null;
+      window.__SE_LAST_SEARCH_STATUS = '';
+      window.__SE_EXISTING_PHOTO_LINK = '';
 
       if (watermarkOverlay) watermarkOverlay.style.display = ''; // restore overlay for next capture
 
@@ -2887,7 +3597,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
   } catch (err) {
     safeSwalFire({
       title: 'ERROR!',
-      text: 'Error submit data: ' + err.message,
+      text: 'Error submitting data: ' + err.message,
       icon: 'error',
       confirmButtonText: 'OK'
     });
@@ -2898,8 +3608,10 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     __SE_isSubmitting = false;
   }
 });
-</script>
-<script>
+
+/* =========================
+   UI - FIXED HEADER OFFSET
+========================= */
 function pad(n){return n<10?'0'+n:n;}
     function updateDateTime() {
       const now = new Date();
@@ -2914,18 +3626,20 @@ function pad(n){return n<10?'0'+n:n;}
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
-</script>
-<script>
+
+/* =========================
+   UI - FIXED HEADER OFFSET
+========================= */
 function syncHeaderOffset() {
   const header = document.querySelector('.fixed-header');
   if (!header) return;
-
   const height = header.offsetHeight;
-  document.body.style.paddingTop = (height + 0) + 'px';
+  document.body.style.paddingTop = height + 'px';
 }
-
 window.addEventListener('load', syncHeaderOffset);
 window.addEventListener('resize', syncHeaderOffset);
+syncHeaderOffset();
 </script>
+
 </body>
 </html>
